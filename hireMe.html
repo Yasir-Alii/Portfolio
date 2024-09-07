@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hire Me - Yasir</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Lobster&display=swap" rel="stylesheet">
+  <style>
+    /* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle, rgba(44, 62, 80, 1) 0%, rgba(34, 47, 62, 1) 100%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.container {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 50px;
+  border-radius: 20px;
+  animation: fadeIn 2s ease-in-out;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 90%;
+}
+
+.title {
+  font-family: 'Lobster', cursive;
+  font-size: 42px;
+  color: #f39c12;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  font-weight: 400;
+  color: #f1c40f;
+}
+
+.hire-btn {
+  display: inline-block;
+  background: #e74c3c;
+  color: #fff;
+  padding: 15px 40px;
+  margin-top: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 50px;
+  letter-spacing: 2px;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hire-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+
+.hire-btn:hover {
+  background: #c0392b;
+  transform: translateY(-7px);
+}
+
+.hire-btn:hover::before {
+  left: 100%;
+}
+
+/* Enhanced Footer Styling */
+footer {
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.collab-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #f1c40f;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  animation: fadeInUp 2s ease-in-out;
+}
+
+.collab-text span {
+   margin-right: 10px; 
+  color: #ff4757;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  font-style: italic;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Let's Work Together!</h1>
+    <p class="description">Looking for a dedicated professional? Click the button below to send me an email!</p>
+    <a href="mailto:your-email@example.com" class="hire-btn">Hire Me</a>
+  </div>
+
+  <footer>
+    <p class="collab-text">Can’t wait to <span>collaborate</span> and create something <span>amazing</span>!</p>
+  </footer>
+</body>
+</html>
