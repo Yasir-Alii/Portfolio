@@ -5,26 +5,34 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
  /* Styles for screens wider than 768px */
- .menu {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 999;
-  /* Other styles as needed */
-}
-.section {
-  scroll-snap-align: start;
-}
+/* Ensure the menu fully expands on mobile */
 @media (max-width: 768px) {
-  /* Styles for mobile devices (screen width less than or equal to 768 pixels) */
-  body {
-    font-size: 16px;
+  #ftco-navbar .navbar-collapse {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;  /* Ensure the collapsed navbar takes full width on mobile */
+    background-color: rgba(0, 0, 0, 0.9);  /* Semi-transparent background for better visibility */
+    z-index: 1000;  /* Ensure it's above other content */
   }
 
-  .header {
-    display: none; /* Hide the header on mobile */
+  .navbar-toggler {
+    z-index: 1100; /* Ensure the toggle button is above the menu */
+  }
+
+  .navbar-collapse.show {
+    height: 100vh; /* Make sure the menu expands to the full height of the screen */
+    overflow-y: auto; /* Allow scrolling within the menu */
+  }
+
+  /* Menu links are styled to take up full width on mobile */
+  .navbar-nav .nav-link {
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
   }
 }
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;

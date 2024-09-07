@@ -276,3 +276,7 @@
 })(jQuery);
 
 
+// Ensure the mobile menu toggle behavior works smoothly
+document.querySelector('.navbar-toggler').addEventListener('click', function () {
+    document.querySelector('#ftco-nav').classList.toggle('show');
+});
