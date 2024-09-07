@@ -276,6 +276,10 @@
 })(jQuery);
 
 
+  document.addEventListener('DOMContentLoaded', function() {
+    // Ensure that scrolling is allowed when the page loads
+    document.body.style.overflow = "auto";
+  });
 
   document.addEventListener('DOMContentLoaded', function() {
     // Get all navigation links

@@ -34,9 +34,11 @@
 }
 html, body {
   overflow-x: hidden; /* Prevent horizontal scroll */
-  overflow-y: auto; /* Ensure vertical scrolling is enabled */
+  overflow-y: auto; /* Enable vertical scrolling */
   scroll-behavior: smooth; /* Enable smooth scrolling */
+  height: auto; /* Ensure the height isn't fixed */
 }
+
 .navbar-collapse {
   z-index: 1000;
 }
@@ -45,6 +47,23 @@ section {
   z-index: 1;
   position: relative;
 }
+
+.navbar {
+  position: fixed;
+  z-index: 1000; /* Ensure the navbar stays on top */
+}
+
+section {
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  /* Ensure no overflow or height restrictions for mobile */
+  body {
+      overflow-y: auto;
+  }
+}
+
 
 
 :root {
