@@ -276,7 +276,22 @@
 })(jQuery);
 
 
-// Ensure the mobile menu toggle behavior works smoothly
-document.querySelector('.navbar-toggler').addEventListener('click', function () {
-    document.querySelector('#ftco-nav').classList.toggle('show');
-});
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get all navigation links
+    const navLinks = document.querySelectorAll('.nav-link');
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+
+    // Add click event to each nav link
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        // Close the navbar when a link is clicked
+        navbarCollapse.classList.remove('show');
+        navbarToggler.classList.add('collapsed');
+        navbarToggler.setAttribute('aria-expanded', 'false');
+      });
+    });
+  });
+
+

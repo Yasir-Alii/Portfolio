@@ -32,6 +32,20 @@
     text-align: center;
   }
 }
+html, body {
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-y: auto; /* Ensure vertical scrolling is enabled */
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+.navbar-collapse {
+  z-index: 1000;
+}
+
+section {
+  z-index: 1;
+  position: relative;
+}
+
 
 :root {
   --blue: #007bff;
