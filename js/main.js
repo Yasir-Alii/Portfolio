@@ -1,4 +1,5 @@
- AOS.init({
+// The code is working properly 
+AOS.init({
  	duration: 800,
  	easing: 'slide'
  });
